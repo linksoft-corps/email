@@ -1,0 +1,42 @@
+{
+    "name": "linksoft/email",
+    "license": "MIT",
+    "type": "linksoft-plugin",
+    "description": "Common Email Driver",
+    "keywords": [
+        "LinkSoft",
+        "Email"
+    ],
+    "authors": [
+        {
+            "name": "LinkSoft Development Corporation",
+            "homepage": "https://www.linksoft.cn"
+        }
+    ],
+    "require": {
+        "php": ">=7.3.0",
+        "psr/log": "^1.0",
+        "swiftmailer/swiftmailer": "^6.3"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "LinkSoft\\Email\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LinkSoftTest\\Email\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "hyperf": {
+            "config": "LinkSoft\\Email\\ConfigProvider"
+        }
+    }
+}
